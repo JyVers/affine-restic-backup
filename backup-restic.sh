@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
 source "$SCRIPT_DIR/.env"
 
 mkdir -p /home/jlatmi/services/restic/tmp/
